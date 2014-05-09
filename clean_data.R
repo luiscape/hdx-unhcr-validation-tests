@@ -20,4 +20,26 @@ CleanData <- function() {
     
     # from wide to long 
     popstats.long <- melt(popstats, id.vars = c("Origin...Returned.from.iso3", "Country...territory.of.residence.iso3","Origin...Returned.from", "Population.type", "Country...territory.of.residence"))
+    
+    # cleaning the X 
+    popstats.long$variable <- gsub("X","",popstats.long$variable)
+    
+    
+    # Cleaning data #
+    # Deleting the comma.
+    access$Refugees <- as.numeric(gsub(",","",access$Refugees))
+    access$Refugees.assisted.by.UNHCR <- as.numeric(gsub(",","",access$Refugees.assisted.by.UNHCR))
+    access$Total.refugees.and.people.in.refugee.like.situations <- 
+        as.numeric(gsub(",","",access$Total.refugees.and.people.in.refugee.like.situations))
+    access$Total.refugees.and.people.in.refugee.like.situations <- 
+        as.numeric(gsub(",","",access$Total.refugees.and.people.in.refugee.like.situations))
+    
+    
+    # Transforming the characters in numbers. 
+    access$Refugees <- as.numeric(access$Refugees)
+    access$Refugees.assisted.by.UNHCR <- as.numeric(access$Refugees.assisted.by.UNHCR)
+    access$Total.refugees.and.people.in.refugee.like.situations <- 
+        as.numeric(access$Total.refugees.and.people.in.refugee.like.situations)
+    access$Total.refugees.and.people.in.refugee.like.situations.assisted.by.UNHCR <- 
+        as.numeric(access$Total.refugees.and.people.in.refugee.like.situations.assisted.by.UNHCR)
 } 
