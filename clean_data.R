@@ -24,6 +24,9 @@ CleanData <- function() {
     # cleaning the X 
     popstats.long$variable <- gsub("X","",popstats.long$variable)
     
+    # cleaning the numbers
+    popstats.long$variable <- as.numeric(popstats.long$variable)
+    popstats.long$value <- as.numeric(popstats.long$value)
     
     # Cleaning data #
     # Deleting the comma.
@@ -42,4 +45,8 @@ CleanData <- function() {
         as.numeric(access$Total.refugees.and.people.in.refugee.like.situations)
     access$Total.refugees.and.people.in.refugee.like.situations.assisted.by.UNHCR <- 
         as.numeric(access$Total.refugees.and.people.in.refugee.like.situations.assisted.by.UNHCR)
+    
+    
+    # Transorming the country codes in uppercase
+    access.codes$Country.code <- toupper(access.codes$Country.code)
 } 

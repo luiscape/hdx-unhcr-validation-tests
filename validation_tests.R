@@ -20,7 +20,8 @@ ggsave(file = 'graphics/Popstats_Site.png', plot = p1)
 ggsave(file = 'graphics/Access_database.png', plot = p2)
 
 
-
+## The following test is incomplete. The idea is to compare the refugee numbers
+## from the 
 # CheckConsistency <- function() { 
 #     for (i in 1:nrow(access)) { 
 #         if (as.numeric(access[i, 4]) == as.numeric(access[i, 5])) { 
