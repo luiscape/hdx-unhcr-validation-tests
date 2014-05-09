@@ -1,0 +1,8 @@
+Column title,Column key,Notes
+Year,YEAR,
+Country or territory of asylum or residence,codasy,
+Country or territory of origin,codori,
+Refugees,Pop End0year   Total,"Persons recognized as refugees under the 1951 UN Convention/1967 Protocol, the 1969 OAU Convention, in accordance with the UNHCR Statute, persons granted a complementary form of protection and those granted temporary protection. In the absence of Government estimates, UNHCR has estimated the refugee population in 24 industrialized countries based on 10 years of individual refugee recognition."
+Refugees assisted by UNHCR,of which:UNHCR0assisted,
+Total refugees and people in refugee-like situations,EndYearRefinclReflike,"The category of people in refugee-like situations is descriptive in nature and includes groups of persons who are outside their country or territory of origin and who face protection risks similar to those of refugees, but for whom refugee status has, for practical or other reasons, not been ascertained."
+Total refugees and people in refugee-like situations assisted by UNHCR,EndYearRefinclReflikeASS,
